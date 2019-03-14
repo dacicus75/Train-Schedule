@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Train Scheduler</title>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-range/3.0.3/moment-range.min.js"></script>
+        
+        
+    <!-- link to firebase -->
+        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!--linkk to ajax-->    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--link to moment.js-->    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <!--link to css file-->     
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+     
+    </head>
+        <body>
+            <!--main header-->
+            <div class="wrapper">
+
+                <div class="jumbotron">
+            <h2>Train Scheduler</h2>
+            <p class="pHeader">Check the train schedule bellow</p>
+        </div>
+        
+        <!--Body container--> 
+            <div class="panel panel-default">
+                <div class="panel-heading">Current Train Schedule</div>
+                        <div class="panel-body">
+                        <table class="table table-hover" id="train-data">
+                <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+                </thead>
+                <tbody> 
+
+                </tbody>
+            </table>
+                        </div>   
+        </div>
+        <!--Add Train-->
+        <div class="panel panel-default">
+            <div class="panel-heading panel-custom">
+                Add a Train
+            </div>
+            <!-- Modal HTML embedded directly into document 
+                <div id="addedTrain" class="modal">
+                    <p>Train was added.</p>
+                    <a href="#" rel="modal:close">Close</a>
+                </div>-->
+            <div class="panel-body">
+                <div class="form">
+                <form>
+                    <div class="form-group">
+                        <label for="trainName">Train Name:</label>
+                        <input type="text" class="form-control" id="train-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainDestination">Destination:</label>
+                        <input type="text" class="form-control" id="train-destination" required>
+                    </div>
+                    <div class="form-group">
+                            <label for="startTrainTime">First Train Time: (HH:mm-military time)</label>
+                            <input type="text" class="form-control" id="train-time" required>
+                        </div>
+                        <div class="form-group">
+                                <label for="trainFrequency">Frequency (minutes)</label>
+                                <input type="text" class="form-control" id="train-frequency" required>
+                            </div> 
+                            
+                                <button type="submit" class="btn btn-default" id="click-button">Submit</button>
+                                
+                        </form>
+                        </div>
+            </div>
+        </div>
+    </div>
+   
+</script>
+    <script src="assets/javascript/app.js"></script>
+    </body>
+</html>
