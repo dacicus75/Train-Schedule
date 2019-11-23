@@ -1,14 +1,4 @@
 
-//var trainArrival="";
-//var trainMinutesAway="";
-
-//var newTrainName =$("#train-name");
-//var newTrainDestination = $("#train-destination");
-
-//var newTrainTime = $("#train-time");//.mask("00");
-//var newTimeFrequency =$("#time-frequency");//.mask("00");
-
-
   var config = {
     apiKey: "AIzaSyAMVNp3qqNJ9o40W-PodglEkmYyxMB6q9U",
     authDomain: "train-scheduler-d830b.firebaseapp.com",
